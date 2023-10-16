@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[37,)" 
+license="LGPL-3.0-only"
+
+[[mods]] 
+modId="yosby" 
+version="1.0.0" 
+displayName="yosby" 
+logoFile="icon.png" 
+credits="shedaniel for making YOSBR" 
+authors="ElocinDev" 
+description='''
+A forge port of YOSBR by shedaniel. Allows to add non intrusive custom default configs for modpacks.
+'''
+[[dependencies.yosby]]
+    modId="forge"
+    mandatory=true
+    versionRange="[37,)" 
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.yosby]]
+    modId="necronomicon" 
+    mandatory=true
+    versionRange="[1.0.9,)" 
+    ordering="NONE"
+    side="BOTH"

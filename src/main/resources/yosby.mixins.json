@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "elocindev.yosby.forge.mixin",
+  "plugin": "elocindev.yosby.forge.mixin.YOSBYPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "yosby.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "minVersion": "0.8"
+}
