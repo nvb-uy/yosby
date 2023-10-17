@@ -14,6 +14,7 @@ import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
 import elocindev.necronomicon.api.config.v1.NecConfigAPI;
+import elocindev.yosby.forge.config.YOSBYConfig;
 import net.minecraftforge.fml.loading.FMLPaths;
 
 public class YOSBYPlugin implements IMixinConfigPlugin {
@@ -25,13 +26,13 @@ public class YOSBYPlugin implements IMixinConfigPlugin {
     @Override
     public void onLoad(String mixinPackage) {
         try {
-            NecConfigAPI.registerConfig(YOSBYPlugin.class);
+            NecConfigAPI.registerConfig(YOSBYConfig.class);
         } catch (Exception e) {
             LOGGER.error("Failed to register YOSBY config.", e);            
         }
 
         try {
-            File yosby = new File(CONFIG_DIR, "yosby");
+            File yosby = new File(CONFIG_DIR, YOSBYConfig.INSTANCE.default_configs_folder);
             if (!yosby.exists() && !yosby.mkdirs()) {
                 throw new IllegalStateException("Could not create directory: " + yosby.getAbsolutePath());
             }

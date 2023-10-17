@@ -8,7 +8,7 @@ public class YOSBYConfig {
     public static YOSBYConfig INSTANCE;
 
     public static String getFile() {
-        return NecConfigAPI.getFile("necronomicon.json");
+        return NecConfigAPI.getFile("yosby.json");
     }
 
     public String default_configs_folder = "yosby";

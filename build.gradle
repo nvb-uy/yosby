@@ -157,7 +157,9 @@ repositories {
         url "https://cursemaven.com" 
         content { includeGroup "curse.maven" } 
     }
+    maven { url 'https://jitpack.io' }
 }
+
 
 dependencies {
     // Specify the version of Minecraft to use.
@@ -181,7 +183,7 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-    implementation fg.deobf("curse.maven:necronomicon-586157:${necronomicon_id}")
+    implementation("curse.maven:necronomicon-586157:${necronomicon_id}")
     implementation fg.deobf("curse.maven:kotlin-for-forge-351264:${kotlin_id}")
 }
 
